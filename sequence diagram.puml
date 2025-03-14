@@ -1,0 +1,10 @@
+@startuml
+actor Student
+participant "Library System" as LS
+participant Librarian
+
+Student -> LS: requestBook(bookID)
+LS -> Librarian: checkAvailability(bookID)
+Librarian -> LS: confirmAvailability()
+LS -> Student: approveBorrow(bookID)
+@enduml
